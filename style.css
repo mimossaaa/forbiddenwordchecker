@@ -5,15 +5,19 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer can be at the bottom */
 }
 
 .container {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto 20px auto; /* Added bottom margin for separation from footer */
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Allow container to grow and push footer down */
 }
 
 h1, h2 {
@@ -29,7 +33,7 @@ textarea {
     font-size: 1em;
 }
 
-button {
+button#processButton { /* More specific selector for the main button */
     display: block;
     background-color: #5cb85c;
     color: white;
@@ -41,7 +45,7 @@ button {
     margin-bottom: 20px;
 }
 
-button:hover {
+button#processButton:hover {
     background-color: #4cae4c;
 }
 
@@ -57,7 +61,52 @@ button:hover {
 
 mark {
     background-color: yellow;
-    padding: 0.1em 0; /* Add a little vertical padding to make it look better */
+    padding: 0.1em 0;
     border-radius: 2px;
     font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    background-color: #fff; /* Match container or use a distinct footer color */
+    width: 100%; /* Make footer span full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.footer-text {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.social-links {
+    margin-top: 5px;
+}
+
+.social-button {
+    display: inline-block;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 8px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.social-button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.social-button.linkedin {
+    background-color: #0077B5; /* LinkedIn blue */
+}
+
+.social-button.github {
+    background-color: #333; /* GitHub black/dark grey */
 }

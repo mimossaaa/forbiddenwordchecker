@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter & Highlighter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Counter & Highlighter</h1>
+        <p>Enter your text below to count specific words and see them highlighted.</p>
+
+        <textarea id="textInput" rows="10" placeholder="Paste your text here..."></textarea>
+        <button id="processButton">Process Text</button>
+
+        <h2>Word/Phrase Counts:</h2>
+        <div id="resultsArea" class="output-area">
+            <p>No words processed yet.</p>
+        </div>
+
+        <h2>Highlighted Text:</h2>
+        <div id="highlightedTextOutput" class="output-area">
+            <p>Text will be highlighted here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
